@@ -17,7 +17,7 @@ import tpsi.web.Student;
 
 @WebServlet(name = "ListaStudentow", urlPatterns = {"/ListaStudentow"})
 public class ListaStudentow extends HttpServlet {
-    public ArrayList<Student> ListaStudentow;
+    
 
     
 
@@ -56,7 +56,7 @@ public class ListaStudentow extends HttpServlet {
         {
             List<Student> ListaStudentow = new ArrayList<>();
             session.setAttribute("ListaStudentow", ListaStudentow);
-            request.getRequestDispatcher("ListaStudentow.jsp").forward(request, response);
+           
         }
         
         List<Student> ListaStudentow = (List<Student>) session.getAttribute("ListaStudentow");
