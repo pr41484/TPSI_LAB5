@@ -16,8 +16,6 @@ import tpsi.web.Student;
 @WebServlet(name = "sesja", urlPatterns = {"/sesja"})
 public class sesja extends HttpServlet {
 
-    Map<String, Integer> osoby_w_sesji;
-    public ArrayList<Student> ListaStudentow;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,6 +32,9 @@ public class sesja extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             HttpSession session = request.getSession();
+
+                Map<String, Integer> osoby_w_sesji;
+                ArrayList<Student> ListaStudentow = null;
 
             String imie = request.getParameter("imie");
             int iloscOdwiedzin = 1;
